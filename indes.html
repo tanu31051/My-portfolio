@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header_text">
+                <p>SDE
+                </p>
+                <h1> HI, I am <span>Tanusha Sharma</span> <br>from India</h1>
+            </div>
+        </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/mee1.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quia esse similique earum voluptas cupiditate aliquid sint
+                            ? Natus iure distinctio minima provident, doloribus molestiae quas, eum laudantium quod error repellendus?</p>
+                            <div class="tab-title">
+                                <p class="tab_links active_links" onclick ="opentab('skills')">Skills</p>
+                                <p class="tab_links" onclick ="opentab('experience')">Experience</p>
+                                <p class="tab_links" onclick ="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul><li><span>Frontend Web Devlopment</span> <br>Desinging</li>
+                                    <li><span>Data Structures and Alorithms</span> <br>working</li>
+                                        <li><span>Competitive Programming</span><br> trying</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul><li><span>B.tech</span> <br>Electronics and Communication Engineering <br>CGPA- 9.11</li>
+                                    <li><span>12th Standard</span> <br>92.8%</li>
+                                        <li><span>10th Standard</span><br> 93%</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul><li><span>June 2024 - July 2024</span> <br>Frontend Web Devlopment Intern at Shree Cement </li>
+                                    <li><span>May 2024 - June 2024</span> <br> Internet of Things Intern at Yhills</li>
+                                        <li><span>Nov 2023 - present </span><br>Embbeded System Specialist at Farcraws under ISRO</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Expertise</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Web Development</h2>
+                        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda dolore quos 
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <h2>Data Structures</h2>
+                        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda dolore quos</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <h2>Algorithms</h2>
+                        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda dolore quos</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab_links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active_links");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active_links");
+                document.getElementById(tabname).classList.add("active-tab");
+
+            }
+        </script>
+
+</body>
+</html>
